@@ -119,20 +119,28 @@ $ L^2 (L_plus.minus f) = L_plus.minus (L^2 f) = L_plus.minus (lambda f)  = lambd
 $L_plus.minus f$ is still an eigenfunction of $L^2$, with the same eigenvalue, but for $L_z$
 $ L_z (L_plus.minus f) = (L_z L_plus.minus - L_plus.minus L_z) f + L_plus.minus L_z f = plus.minus planck.reduce L_plus.minus f + L_plus.minus (mu f) = (mu plus.minus planck.reduce)(L_plus.minus f) $
 thus the operator changes the eigenvalue with an amount of $planck.reduce$ for $L_z$
-since the _z_ component cannot exceed the total angular momentum, there must exists a top rung (maximal state) such that
+
+Since the _z_ component cannot exceed the total angular momentum, there must exists a top rung (maximal state) such that
 $ L_+ f_t = 0 $
 introduce some constants
 $ L_z f_t = planck.reduce l f_t, space L^2 f_t = lambda f_t $
 Then,
 $ L_plus.minus L_minus.plus = (L_x plus.minus i L_y)(L_x minus.plus i L_y) = L_x^2 + L_y^2 minus.plus i[L_x, L_y] = L^2 - L_z^2 minus.plus i(i planck.reduce L_z) $
-$ L^2 = L_plus.minus L_minus.plus + L_z^2 minus.plus planck.reduce L_z $
+$ L^2 = L_plus.minus L_minus.plus + L_z^2 minus.plus planck.reduce L_z $ <60>
 so we can say that
-$ L^2 f_t = (L_- L_+ + L_z^2 + planck.reduce L_z)f_t = (0 + planck.reduce^2 l^2 + planck.reduce^2 l)f_t = planck.reduce^2 l(l+1)f_t $ <60>
+$ L^2 f_t = (L_- L_+ + L_z^2 + planck.reduce L_z)f_t = (0 + planck.reduce^2 l^2 + planck.reduce^2 l)f_t = planck.reduce^2 l(l+1)f_t $
 and hence
-$ lambda = planck.reduce^2 l(l+q) $
+$ lambda = planck.reduce^2 l(l+q) $ <62>
 this indicates the eigenvalue of $L^2$ in terms of the _maximum_ eigenvalue of $L_z$
 
 Of course there is the bottom rung where $L_- f_b = 0$, let's say
 $ L_z f_b = planck.reduce macron(l)f_b, space L^2 f_b = lambda f_b $
 using @60 again, we have $L^2 f_b = planck.reduce^2 macron(l)(macron(l) - 1)f_b$, and therefore
-$ lambda = planck.reduce^2 macron(l)(macron(l)-1) $
+$ lambda = planck.reduce^2 macron(l)(macron(l)-1) $ <64>
+combine @62 and @64 we can see that $l(l+1)=macron(l)(macron(l)-1)$, since $l$ should be larger than $macron(l)$ to make any sense
+$ macron(l) = -l $
+The eigenvalues of $L_z$ are $m planck.reduce$ where $m$ gores from $-l$ to $+l$ in _N_ integer steps. Specifically, since$l - macron(l) = N$ and hence $l = N/2$, thus $l$ must be an integer or half-integer. The eigenfunctions characterized by the numbers $l$ and $m$
+$ L^2 f_l^m = planck.reduce^2 l(l+1)f_l^m , space L_z f_l^m = planck.reduce m f_l^m $
+with
+$ l = 0, 1/2, 1, 3/2, dots.h; space m = -l, -l+1,dots.h,l-1,l $
+and for a $l$ there are $2l+1$ different values of $m$
