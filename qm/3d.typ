@@ -1,6 +1,6 @@
- #set text(
-   font: "Noto Sans SignWriting Regular",
- )
+#set text(
+ font: "Noto Sans SignWriting Regular",
+)
 #set math.equation(numbering: "(1)")
 == Equation in 3 dimensions
 Schrodinger’s equation:
