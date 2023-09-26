@@ -43,6 +43,7 @@ $ E_n = (planck.reduce^2 k_n^2)/(2m) = (n^2 pi^2 planck.reduce^2)/(2m a^2) $
 at last, the normalization
 $ integral_0^a abs(A)^2 sin^2 (k x) d  x = abs(A)^2 a/2 =  1, space space "so" abs(A)^2 = 2/a $
 and the time-independent solutions are
+$ psi_n (x) = sqrt(2/a) sin((n pi)/a x) $
 
 == Harmonic Oscillator
 consider the potential 
