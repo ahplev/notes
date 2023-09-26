@@ -17,11 +17,49 @@
 //    it
 //  }
 //}
+//
+= One dimensional Square Well
+
 == Infinite Square Well
 $ V(x) = cases(
   0"," space 0 lt.eq x lt.eq a,
   oo"," space "otherwise"
   ) $
+boundary conditions
+$ psi(0) = 0\
+  psi(a) = 0 $
+Indise well, 
+$ psi(x) = A e^(i/planck.reduce p x) + B e^(-i/planck.reduce p x)\
+  cases(
+    A + B = 0,
+    A e^(i/planck.reduce p a) + B e^(-i/planck.reduce p a) = 0
+    )
+$
+$ B = -A\
+  sin p/planck.reduce a = 0
+$
+- $psi_n(x) = A_n sin (n pi)/a x, space E_n = (n^2 planck.reduce^2 pi^2)/(2 m a^2)$
+$ integral_0^a abs(A_n)^2 sin^2 (n pi)/a x d x &= abs(A_n)^2 / 2 integral_0^a 1 - cos (2 n pi)/a x d x\
+  &= (abs(A_n)^2 a)/2 = 1 $
+- $E_n prop n^2$
+$
+  Delta E_n prop n\
+  (Delta E_n)/(E_n) prop 1/n
+$
+- $psi_n prop sin (n pi)/a x$
+
+- ground state $E_1, psi_1$
+
+- $psi(x) = sum a_n psi_n (x)$
+- density of states
+$ rho(E) = (delta N)/(delta E) = 1/(d E slash d n)\
+  E = A n^2\
+  (d E)/(d n) = 2 A n\
+  rho(E) = 1/(2 sqrt(E A)) = (a sqrt(2 m))/(2 pi planck.reduce sqrt(E))
+  $
+- $psi(x, t_0) = sqrt(2/a) sin pi/a x$
+
+
 Inside the well, time-independent Schrodinger equation
 $ -planck.reduce^2 /(2m)(d^2 psi)/(d x^2) = E psi $
 let $k eq.triple sqrt(2m E)/planck.reduce$, we have
