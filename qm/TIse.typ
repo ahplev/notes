@@ -100,3 +100,40 @@ $ angle.l psi_m bar.v hat(a)_plus hat(a)_- psi_n angle.r &= n angle.l psi_m bar.
   &= m angle.l psi_m bar.v psi_n angle.r
 $
 $ angle.l psi_m bar.v psi_n angle.r = delta_(m n) $
+
+=== Analytic Method
+Let's, at least, write the Schrodinger equation once
+$ -planck.reduce^2/(2m)(d^2 psi)/(d x^2) + 1/2 m omega^2 x^2 psi = E psi $
+and someone, somehow, introduced two variables
+$ xi eq.triple sqrt((m omega)/planck.reduce)x, space K eq.triple (2E)/(planck.reduce omega) $
+and how he got to know that we need to do this, I have no idea, whatever, than the equation reads
+$ (d^2 psi)/(d xi^2) = (xi^2 - K)psi $ <41>
+when $xi$ goes infinity with constant energy
+$ (d^2 psi)/(d xi^2) approx xi^2 psi $
+so we have this
+$ psi(xi) approx A e^(-xi^2 slash 2) + B e^(+xi^2 slash 2) $
+clearly $B e^(+xi^2 slash 2)$ results in diverging, so $B$ must be 0; now, quite like the separation of variables, we separate the asymptotic part like this
+$ psi(xi) = h(xi) e^(-xi^2 slash 2) $
+in hopes that $h(xi)$ has a simpler form.
+$ (d psi)/(d xi) = ((d h)/(d xi) - xi h) e^(-xi^2 slash 2)\
+  (d^2 psi)/(d xi^2) = ((d^2 h)/(d xi^2) - 2xi (d h)/(d xi) + (xi^2 - 1)h)e^(-xi^2 slash 2) $
+@41 than becomes
+$ (d^2 h)/(d xi^2) - 2xi (d h)/(d xi)+ (K-1)h = 0 $ <46>
+find the power series solution in terms of $xi$
+$ h(xi) = sum_(j=0)^oo a_j xi^j\
+  (d h)/(d xi) = sum_(j = 0)^oo (j+1) a_(j+1) xi^(j)\
+  (d^2 h)/(d xi^2) = sum_(j=0)^oo (j+1)(j+2)a_(j+2)xi^j $
+putting back into @46
+$ sum_(j=0)^oo (j+1)(j+2)a_(j+2)xi^j - 2sum_(j=0)^oo (j+1)a_(j+1) xi^(j+1) + (K-1)sum_(j=0)^oo a_j xi^j = 0\
+sum_(j = 0)^oo [(j+1)(j+2)a_(j+2) - 2 j a_j + (K-1)a_j]xi^j = 0\
+a_(j+2) = (2j+1-K)/((j+1)(j+2))  a_j $ <48>
+the upper asympotic behavior of this recursion is
+$ a_(j+2) approx 2/j a_j\
+  a_j approx C/((j slash 2)!)\
+  h(xi) approx C sum 1/((j slash 2)!) xi^j approx C sum 1/(j!) xi^(2j)  approx C e^(xi^2) $
+so this recursion must terminates, i.e. 
+$ exists n, space K = 2n+1 $
+again we derived this energy with a different method
+$ E_n = (n+1/2)planck.reduce omega,  space n = 0, 1, 2, dots.h  $
+the recursion formula @48 is now
+$ a_(j+2)  =  (-2(n-j))/((j+1)(j+2))a_j $
