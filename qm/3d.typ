@@ -1,7 +1,7 @@
 #set text(
  font: "Noto Sans SignWriting Regular",
 )
-#set math.equation(numbering: "(1)")
+#set math.equation(numbering: "1", supplement: [Eq.])
 == Equation in 3 dimensions
 Schrodinger’s equation:
 $ i planck.reduce (diff Psi)/(diff t) = hat(H) Psi $ <seq>
@@ -130,7 +130,7 @@ $ L^2 = L_plus.minus L_minus.plus + L_z^2 minus.plus planck.reduce L_z $ <60>
 so we can say that
 $ L^2 f_t = (L_- L_+ + L_z^2 + planck.reduce L_z)f_t = (0 + planck.reduce^2 l^2 + planck.reduce^2 l)f_t = planck.reduce^2 l(l+1)f_t $
 and hence
-$ lambda = planck.reduce^2 l(l+q) $ <62>
+$ lambda = planck.reduce^2 l(l+1) $ <62>
 this indicates the eigenvalue of $L^2$ in terms of the _maximum_ eigenvalue of $L_z$
 
 Of course there is the bottom rung where $L_- f_b = 0$, let's say
@@ -139,8 +139,16 @@ using @60 again, we have $L^2 f_b = planck.reduce^2 macron(l)(macron(l) - 1)f_b$
 $ lambda = planck.reduce^2 macron(l)(macron(l)-1) $ <64>
 combine @62 and @64 we can see that $l(l+1)=macron(l)(macron(l)-1)$, since $l$ should be larger than $macron(l)$ to make any sense
 $ macron(l) = -l $
-The eigenvalues of $L_z$ are $m planck.reduce$ where $m$ gores from $-l$ to $+l$ in _N_ integer steps. Specifically, since$l - macron(l) = N$ and hence $l = N/2$, thus $l$ must be an integer or half-integer. The eigenfunctions characterized by the numbers $l$ and $m$
+The eigenvalues of $L_z$ are $m planck.reduce$ where $m$ goes from $-l$ to $+l$ in _N_ integer steps. Specifically, since$l - macron(l) = N$ and hence $l = N/2$, thus $l$ must be an integer or half-integer. The eigenfunctions characterized by the numbers $l$ and $m$
 $ L^2 f_l^m = planck.reduce^2 l(l+1)f_l^m , space L_z f_l^m = planck.reduce m f_l^m $
 with
 $ l = 0, 1/2, 1, 3/2, dots.h; space m = -l, -l+1,dots.h,l-1,l $
 and for a $l$ there are $2l+1$ different values of $m$
+
+the remaining problem is that I don't know why angular momentum is discrete in the first place
+
+- $L_minus.plus$ and $L_plus.minus$ are hermitian conjugate
+$ [x, p_y] = 0 \
+ L_x^dagger = p_z y - z p_y = L_x \
+ L_plus.minus^dagger = L_x^dagger minus.plus i L_y^dagger = L_x minus.plus i L_y = L_minus.plus
+$
